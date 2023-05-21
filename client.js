@@ -11,18 +11,16 @@ const connect = function () {
   conn.setEncoding("utf8");
   
   conn.on("connect", () => {
-    console.log('Successfully connected to the game server!');
+    console.log('Successfully connected to Game Server!');
     conn.write('Name: EST');
     //conn.write('Move: up');
     //conn.write('Move: down');
-    //setInterval(function() { conn.write("Move: left"); }, 100);
+    //setInterval(function() { conn.write('Move: left'); }, 100);
 
   }); 
 
   conn.on("data", (data) => {
     console.log("Data received", data)
-
-   
   });
 
   return conn;
