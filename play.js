@@ -1,28 +1,7 @@
-const { connect } = require('./client');
-console.log('Connecting...');
+const { connect } = require("./client");
+const { setupInput } = require("./input");
 
+console.log("Connecting ...");
 connect();
-
-// setup interface to handle user input from stdin
-// setupInput allows keyboard input and reaction
-// stdin = standard input
-
-const setupInput = function () {
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  return stdin;
-};
-
-// handleUserInput function will receive data from stdin (aka keyboard input)
-const handleUserInput = function () {
-  stdin.on('data', (key) => {
-// \u0003 maps to ctrl+c input
-if (key === '\u0003') {
-  process.exit();
-    };
-  });
-};
 
 setupInput();
