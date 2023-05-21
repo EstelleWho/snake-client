@@ -18,10 +18,10 @@ const connect = function () {
     //conn.write('Move: down');
     //setInterval(function() { conn.write('Move: left'); }, 100);
 
-  }); 
+  });
 
   conn.on("data", (data) => {
-    console.log("Data received", data)
+    console.log("Data received", data);
   });
 
   return conn;
