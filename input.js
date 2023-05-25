@@ -8,10 +8,6 @@ const setupInput = function(conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on('data', handleUserInput);
-  // stdin.on('data', key => {
-  //   console.log('hiii', key);
-  //   process.stdout.write('hellooo');
-  // });
   return stdin;
 };
 
