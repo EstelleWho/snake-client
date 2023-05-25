@@ -1,12 +1,17 @@
 let connection;
 
 const setupInput = function(conn) {
+  console.log('hello');
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-  stdin.on('data', key => handleUserInput(key));
+  stdin.on('data', handleUserInput);
+  // stdin.on('data', key => {
+  //   console.log('hiii', key);
+  //   process.stdout.write('hellooo');
+  // });
   return stdin;
 };
 
@@ -16,19 +21,19 @@ const handleUserInput = function(key) {
     process.exit();
   }
   if (key === '\u0077') {
-    connection.write('Move: UP');
+    connection.write('Move: up');
   }
 
   if (key === '\u0061') {
-    connection.write('Move: LEFT');
+    connection.write('Move: left');
   }
 
   if (key === '\u0073') {
-    connection.write('Move: DOWN');
+    connection.write('Move: down');
   }
 
   if (key === '\u0064') {
-    connection.write('Move: RIGHT');
+    connection.write('Move: right');
   }
 
   if (key === '\u0066') {
