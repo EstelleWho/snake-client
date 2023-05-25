@@ -22,7 +22,7 @@ Before you can run this client, you will need to be running the server side whic
 ## Instructions
 
 Press keys:
-- w : move the snake up one block
-- a : move the snake left one block
-- s : move the snake down one block
-- d : move the snake right one block
+- w : to move the snake up one block
+- a : to move the snake left one block
+- s : to move the snake down one block
+- d : to move the snake right one block
